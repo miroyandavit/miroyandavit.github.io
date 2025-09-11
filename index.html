@@ -1,71 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Davit Miroyan</title>
+  <meta name="description" content="Personal site of Davit Miroyan — UChicago undergraduate." />
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 0;
-      padding: 40px;
-      background: #f9fafb;
-      color: #111827;
+    /* Minimal, muted, print-friendly */
+    :root{
+      --bg:#f8fafc;        /* very light gray */
+      --text:#0f172a;      /* slate-900 */
+      --muted:#64748b;     /* slate-500/600 */
+      --rule:#e5e7eb;      /* gray-200 */
+      --link:#1f2937;      /* slate-800 (subtle) */
+      --link-underline:#94a3b8; /* slate-400 */
     }
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0f14;
+        --text:#e5e7eb;
+        --muted:#94a3b8;
+        --rule:#1f2937;
+        --link:#e5e7eb;
+        --link-underline:#475569;
+      }
     }
-    .photo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #6b7280;
+
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    h1 {
-      margin: 0 0 16px;
-      font-size: 22px;
+
+    .wrap{max-width:720px;margin:0 auto;padding:44px 24px}
+
+    /* Header */
+    header{text-align:center;margin-top:20px;margin-bottom:24px}
+    .photo{
+      width:140px;height:140px;border-radius:50%;
+      object-fit:cover;object-position:center;
+      background:#e5e7eb;display:inline-block;
     }
-    .info p {
-      margin: 6px 0;
+    h1{margin:12px 0 6px;font-size:28px}
+    .role{margin:0;color:var(--muted)}
+    .location{margin:2px 0 0;color:var(--muted);font-size:14px}
+
+    /* Links row */
+    .links{
+      margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center
     }
-    a {
-      color: #1f2937;
-      text-decoration: none;
-      border-bottom: 1px solid #d1d5db;
+    .links a{
+      color:var(--link);text-decoration:none;border-bottom:1px solid transparent
     }
-    a:hover {
-      border-bottom-color: #9ca3af;
-    }
+    .links a:hover{border-bottom-color:var(--link-underline)}
+    .links i{margin-right:6px;opacity:.9}
+
+    /* Divider */
+    .rule{height:1px;background:var(--rule);margin:22px 0}
+
+    /* About paragraph */
+    .about{max-width:60ch;margin:0 auto;color:var(--text)}
+    .muted{color:var(--muted)}
+    footer{margin:36px 0 8px;text-align:center;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="photo">Photo</div>
-    <div class="info">
-      <h1>About me</h1>
-      <p><strong>Davit Miroyan</strong></p>
-      <p>Undergraduate student at the University of Chicago</p>
+  <div class="wrap">
+    <header>
+      <!-- Replace photo.jpg with your actual image filename in the repo root -->
+      <img src="photo.jpg" alt="Davit Miroyan" class="photo" />
+      <h1>Davit Miroyan</h1>
+      <p class="role">Undergraduate, University of Chicago</p>
+      <p class="location">Chicago, IL</p>
+
+      <nav class="links" aria-label="Personal links">
+        <a href="mailto:davitmiroyan@uchicago.edu"><i class="fa-solid fa-envelope"></i>Email</a>
+        <a href="cv.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file"></i>CV</a>
+        <a href="https://www.linkedin.com/in/davit-miroyan-90a450361/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/miroyandavit" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+      </nav>
+    </header>
+
+    <div class="rule"></div>
+
+    <!-- Keep homepage lightweight & non-redundant -->
+    <section class="about">
       <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#374151" 
-            viewBox="0 0 24 24" style="vertical-align:middle;margin-right:6px;">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
-            2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
-            4-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-  <a href="mailto:davitmiroyan@uchicago.edu">davitmiroyan@uchicago.edu</a>
-</p>
-      <p><a href="cv.pdf" target="_blank">CV</a></p>
-      <p><a href="https://www.linkedin.com/in/davit-miroyan-90a450361/" target="_blank">LinkedIn</a></p>
-    </div>
+        Interested in human-centered AI and cognitive computation. I like building simple tools for learning and
+        studying how people interact with intelligent systems.
+      </p>
+      <p class="muted">
+        For my full background, see the <a href="cv.pdf" target="_blank" rel="noopener">CV</a>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Davit Miroyan
+    </footer>
   </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
