@@ -6,46 +6,60 @@
   <title>Davit Miroyan</title>
   <meta name="description" content="Personal site of Davit Miroyan — UChicago student interested in human-centered AI, HCI, and cognitive computation." />
   <style>
-    /* ------ Base ------ */
+    /* ==========================
+       Minimal, muted, print-friendly
+       ========================== */
     :root{
-      --bg:#0f172a;        /* slate-900 */
-      --card:#0b1224;      /* darker card */
-      --muted:#94a3b8;     /* slate-400 */
-      --text:#e2e8f0;      /* slate-200 */
-      --accent:#38bdf8;    /* sky-400 */
-      --accent-2:#22d3ee;  /* cyan-400 */
-      --ring: rgba(56,189,248,.35);
+      --bg:#f8fafc;           /* very light gray */
+      --card:#ffffff;          /* white */
+      --text:#0f172a;          /* slate-900 */
+      --muted:#475569;         /* slate-600 */
+      --border:#e5e7eb;        /* gray-200 */
+      --link:#1f2937;          /* slate-800 (subtle) */
+      --link-underline:#94a3b8;/* slate-400 underline */
     }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0f14;
+        --card:#0f141b;
+        --text:#e5e7eb;
+        --muted:#94a3b8;
+        --border:#1f2937;
+        --link:#e5e7eb;
+        --link-underline:#475569;
+      }
+    }
+
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:linear-gradient(180deg,var(--bg),#111827);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{color:var(--accent-2)}
-    .wrap{max-width:900px;margin:0 auto;padding:28px}
+    html,body{margin:0;height:100%}
+    body{background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:860px;margin:0 auto;padding:28px}
 
-    /* ------ Header ------ */
-    header{display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;padding:48px 0 28px}
-    .name{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:.3px}
-    .links{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
-    .links a{padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.08);border:1px solid rgba(148,163,184,.16)}
-    .links a:focus{outline:2px solid var(--ring);outline-offset:2px}
+    /* Links: muted, underline on hover only */
+    a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
+    a:hover{border-bottom-color:var(--link-underline)}
 
-    /* ------ Card layout ------ */
-    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    /* Header */
+    header{padding:36px 0 20px;text-align:center}
+    .name{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:.2px}
+    .links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+
+    /* Section heading with subtle rule */
+    h1{font-size:18px;font-weight:700;margin:26px 0 14px}
+    .rule{height:1px;background:var(--border);margin:8px 0 0}
+
+    /* Cards are optional; keep very light */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
     @media(min-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
 
-    .card{background:linear-gradient(180deg,rgba(148,163,184,.08),rgba(148,163,184,.04));border:1px solid rgba(148,163,184,.16);border-radius:16px;padding:20px}
-    .card h2{margin:0 0 8px;font-size:18px}
-    .card .sub{color:var(--muted);font-size:14px;margin-bottom:10px}
-    .tag{display:inline-block;margin-right:8px;margin-top:8px;padding:2px 8px;border-radius:999px;background:rgba(56,189,248,.12);color:#7dd3fc;font-size:12px;border:1px solid rgba(56,189,248,.3)}
-
-    /* ------ Sections ------ */
-    section{margin:20px 0}
-    section h1{font-size:20px;margin:8px 0 12px;padding-bottom:10px;border-bottom:1px solid rgba(148,163,184,.2)}
+    h2{font-size:16px;margin:0 0 6px}
+    .sub{color:var(--muted);font-size:14px;margin:0 0 8px}
     ul{margin:0;padding-left:18px}
     li{margin:6px 0}
 
-    footer{opacity:.8;color:var(--muted);padding:36px 0;text-align:center}
-    .btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(148,163,184,.2);background:rgba(148,163,184,.08)}
+    footer{color:var(--muted);text-align:center;padding:28px 0 10px;font-size:14px}
+    .btn{display:inline-block;margin-top:8px;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:transparent}
   </style>
 </head>
 <body>
@@ -61,58 +75,53 @@
       </div>
     </header>
 
-    <section id="about" class="card">
-      <h2>About</h2>
-      <div class="sub">UChicago undergraduate · Computer Science & Cognitive Science (intended)</div>
-      <p>Interested in human-centered AI, HCI, and cognitive computation. I enjoy building practical tools for learning and exploring how people interact with intelligent systems.</p>
+    <h1>About</h1>
+    <div class="rule"></div>
+    <section class="card" id="about">
+      <p>UChicago undergraduate — Computer Science & Cognitive Science (intended). Interested in human-centered AI, HCI, and cognitive computation. I build practical tools for learning and study how people interact with intelligent systems.</p>
     </section>
 
+    <h1>Projects</h1>
+    <div class="rule"></div>
     <section id="projects">
-      <h1>Projects</h1>
       <div class="grid">
         <article class="card">
           <h2>EduVision AI</h2>
           <div class="sub">AI tools for mathematics education</div>
-          <p>Designed and tested tools emphasizing personalization and formative feedback.
-          </p>
+          <p>Designed and tested tools emphasizing personalization and formative feedback.</p>
           <a class="btn" href="https://github.com/miroyandavit/EduVision-AI" target="_blank" rel="noopener">GitHub</a>
-          <span class="tag">Python</span><span class="tag">Education</span>
         </article>
-
         <article class="card">
           <h2>SocraticGPT (NYAS)</h2>
           <div class="sub">LLM agent implementing the Socratic method</div>
-          <p>Collaborated with a New York Academy of Sciences team to prompt-engineer a tutor that asks guiding questions.</p>
+          <p>Collaborated with a New York Academy of Sciences team to build a tutor that asks guiding questions.</p>
           <a class="btn" href="https://github.com/miroyandavit/SocraticGPT" target="_blank" rel="noopener">GitHub</a>
-          <span class="tag">LLM</span><span class="tag">Prompting</span>
         </article>
-
         <article class="card">
           <h2>Look Optic Program</h2>
           <div class="sub">Clinic data system — Flask + MySQL</div>
-          <p>Built a web app for managing patient visits and records with secure authentication.</p>
-          <span class="tag">Flask</span><span class="tag">MySQL</span>
+          <p>Web app for managing patient visits and records with secure authentication.</p>
         </article>
-
         <article class="card">
           <h2>IB Math EE</h2>
           <div class="sub">Hopfield vs. Boltzmann (comparative analysis)</div>
           <p>Independent essay comparing mathematical foundations and dynamics of two classic neural models.</p>
-          <span class="tag">Math</span><span class="tag">Neural models</span>
         </article>
       </div>
     </section>
 
-    <section id="education" class="card">
-      <h2>Education</h2>
+    <h1>Education</h1>
+    <div class="rule"></div>
+    <section class="card" id="education">
       <ul>
         <li><strong>University of Chicago</strong> — Computer Science & Cognitive Science (intended) <span class="sub">(Sep 2025 – Present)</span></li>
         <li><strong>Quantum College</strong> — International Baccalaureate Diploma (41/45) <span class="sub">(2022 – 2024)</span></li>
       </ul>
     </section>
 
-    <section id="skills" class="card">
-      <h2>Skills</h2>
+    <h1>Skills</h1>
+    <div class="rule"></div>
+    <section class="card" id="skills">
       <ul>
         <li><strong>Programming</strong>: Python, Java</li>
         <li><strong>Frameworks & Tools</strong>: Flask, Git/GitHub, VS Code</li>
@@ -122,11 +131,9 @@
     </section>
 
     <footer>
-      © <span id="y"></span> Davit Miroyan • Last updated by hand
+      © <span id="y"></span> Davit Miroyan • Minimal build
     </footer>
   </div>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
