@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Davit Miroyan</title>
+  <meta name="description" content="Personal site of Davit Miroyan — UChicago student interested in human-centered AI, HCI, and cognitive computation." />
+  <style>
+    /* ------ Base ------ */
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --card:#0b1224;      /* darker card */
+      --muted:#94a3b8;     /* slate-400 */
+      --text:#e2e8f0;      /* slate-200 */
+      --accent:#38bdf8;    /* sky-400 */
+      --accent-2:#22d3ee;  /* cyan-400 */
+      --ring: rgba(56,189,248,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:linear-gradient(180deg,var(--bg),#111827);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-2)}
+    .wrap{max-width:900px;margin:0 auto;padding:28px}
+
+    /* ------ Header ------ */
+    header{display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;padding:48px 0 28px}
+    .name{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:.3px}
+    .links{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center}
+    .links a{padding:6px 10px;border-radius:999px;background:rgba(148,163,184,.08);border:1px solid rgba(148,163,184,.16)}
+    .links a:focus{outline:2px solid var(--ring);outline-offset:2px}
+
+    /* ------ Card layout ------ */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+    .card{background:linear-gradient(180deg,rgba(148,163,184,.08),rgba(148,163,184,.04));border:1px solid rgba(148,163,184,.16);border-radius:16px;padding:20px}
+    .card h2{margin:0 0 8px;font-size:18px}
+    .card .sub{color:var(--muted);font-size:14px;margin-bottom:10px}
+    .tag{display:inline-block;margin-right:8px;margin-top:8px;padding:2px 8px;border-radius:999px;background:rgba(56,189,248,.12);color:#7dd3fc;font-size:12px;border:1px solid rgba(56,189,248,.3)}
+
+    /* ------ Sections ------ */
+    section{margin:20px 0}
+    section h1{font-size:20px;margin:8px 0 12px;padding-bottom:10px;border-bottom:1px solid rgba(148,163,184,.2)}
+    ul{margin:0;padding-left:18px}
+    li{margin:6px 0}
+
+    footer{opacity:.8;color:var(--muted);padding:36px 0;text-align:center}
+    .btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(148,163,184,.2);background:rgba(148,163,184,.08)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="name">Davit Miroyan</div>
+      <div class="links" aria-label="personal links">
+        <a href="mailto:davitmiroyan@uchicago.edu">Email</a>
+        <a href="https://yourname.github.io" target="_blank" rel="noopener">Website</a>
+        <a href="https://www.linkedin.com/in/davit-miroyan-90a450361/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/miroyandavit" target="_blank" rel="noopener">GitHub</a>
+        <a href="cv.pdf" class="btn" target="_blank" rel="noopener">Download CV (PDF)</a>
+      </div>
+    </header>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <div class="sub">UChicago undergraduate · Computer Science & Cognitive Science (intended)</div>
+      <p>Interested in human-centered AI, HCI, and cognitive computation. I enjoy building practical tools for learning and exploring how people interact with intelligent systems.</p>
+    </section>
+
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="grid">
+        <article class="card">
+          <h2>EduVision AI</h2>
+          <div class="sub">AI tools for mathematics education</div>
+          <p>Designed and tested tools emphasizing personalization and formative feedback.
+          </p>
+          <a class="btn" href="https://github.com/miroyandavit/EduVision-AI" target="_blank" rel="noopener">GitHub</a>
+          <span class="tag">Python</span><span class="tag">Education</span>
+        </article>
+
+        <article class="card">
+          <h2>SocraticGPT (NYAS)</h2>
+          <div class="sub">LLM agent implementing the Socratic method</div>
+          <p>Collaborated with a New York Academy of Sciences team to prompt-engineer a tutor that asks guiding questions.</p>
+          <a class="btn" href="https://github.com/miroyandavit/SocraticGPT" target="_blank" rel="noopener">GitHub</a>
+          <span class="tag">LLM</span><span class="tag">Prompting</span>
+        </article>
+
+        <article class="card">
+          <h2>Look Optic Program</h2>
+          <div class="sub">Clinic data system — Flask + MySQL</div>
+          <p>Built a web app for managing patient visits and records with secure authentication.</p>
+          <span class="tag">Flask</span><span class="tag">MySQL</span>
+        </article>
+
+        <article class="card">
+          <h2>IB Math EE</h2>
+          <div class="sub">Hopfield vs. Boltzmann (comparative analysis)</div>
+          <p>Independent essay comparing mathematical foundations and dynamics of two classic neural models.</p>
+          <span class="tag">Math</span><span class="tag">Neural models</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>University of Chicago</strong> — Computer Science & Cognitive Science (intended) <span class="sub">(Sep 2025 – Present)</span></li>
+        <li><strong>Quantum College</strong> — International Baccalaureate Diploma (41/45) <span class="sub">(2022 – 2024)</span></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming</strong>: Python, Java</li>
+        <li><strong>Frameworks & Tools</strong>: Flask, Git/GitHub, VS Code</li>
+        <li><strong>Databases</strong>: MySQL</li>
+        <li><strong>Languages</strong>: Armenian (native), Russian (proficient), English (proficient)</li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Davit Miroyan • Last updated by hand
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
