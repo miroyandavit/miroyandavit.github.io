@@ -118,10 +118,10 @@ main.hero-main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--tile-border);
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
@@ -134,8 +134,8 @@ main.hero-main {
 }
 
 .hero-links svg {
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
