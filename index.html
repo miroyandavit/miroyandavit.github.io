@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davit Miroyan</title>
+<meta name="description" content="Davit Miroyan is an undergraduate at the University of Chicago studying Computational and Applied Mathematics, working on human-AI collaboration research and teaching introductory CS.">
+<link rel="canonical" href="https://miroyandavit.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="site-nav">
+    <a href="index.html" class="active">About</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <main class="hero-main">
+    <div class="hero">
+      <img src="assets/img/profile.jpg" alt="Davit Miroyan" onerror="this.src='assets/img/profile-placeholder.svg'">
+      <div class="hero-text">
+        <p class="hero-name">Davit Miroyan <span class="native-name">Դավիթ Միրոյան</span></p>
+        <p>
+          I'm an undergraduate @ UChicago studying Computational and Applied Mathematics.
+          I'm broadly interested in the intersection of natural and artificial
+          intelligence, and I'm currently working on building user simulators.
+          Starting fall 2026, I'll also be teaching introductory CS (CS141 and CS142).
+        </p>
+        <p>
+          Outside of that, I run (or train for it), ski, and
+          <a href="blog/index.html">write</a> about whatever's on my mind.
+        </p>
+        <div class="btn-row">
+          <a class="pill-btn" href="blog/index.html">Blog &#8594;</a>
+          <a class="pill-btn" href="gallery.html">Gallery &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> Davit Miroyan &middot; <a href="mailto:miroyan7davit@gmail.com">miroyan7davit@gmail.com</a>
+  </footer>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

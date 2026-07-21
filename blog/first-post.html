@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my blog — Davit Miroyan</title>
+<meta name="description" content="First post on Davit Miroyan's blog.">
+<link rel="canonical" href="https://miroyandavit.github.io/blog/first-post.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="site-nav">
+    <a href="../index.html">About</a>
+    <a href="index.html" class="active">Blog</a>
+    <a href="../gallery.html">Gallery</a>
+  </nav>
+
+  <main>
+    <a class="back-link" href="index.html">&larr; Back to all posts</a>
+    <h1 class="page-title" style="margin-bottom:6px;">Welcome to my blog</h1>
+    <p class="post-meta">July 21, 2026</p>
+
+    <div class="post-body">
+      <p>
+        This is the first post — replace it with whatever you want to say
+        first: why you built this site, what you plan to write about, or
+        just a short introduction.
+      </p>
+      <p>
+        Each post is its own HTML file in the <code>blog/</code> folder.
+        To write a new one: copy this file, change the title, date, and
+        text, then link to it from <code>blog/index.html</code>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> Davit Miroyan &middot; <a href="mailto:miroyan7davit@gmail.com">miroyan7davit@gmail.com</a>
+  </footer>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
