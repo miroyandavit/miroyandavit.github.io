@@ -111,31 +111,32 @@ main.hero-main {
 .hero-links {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14.5px;
+  gap: 16px;
 }
 
 .hero-links a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--tile-border);
+  border-radius: 8px;
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.18s ease;
-}
-
-.hero-links svg {
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .hero-links a:hover {
   color: var(--ink);
+  border-color: var(--ink);
+  background: #f6f3ef;
 }
 
-.hero-links .dot {
-  color: var(--tile-border);
+.hero-links svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .hero-text p.hero-name {
