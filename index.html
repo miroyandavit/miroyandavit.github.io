@@ -22,7 +22,20 @@
 
   <main class="hero-main">
     <div class="hero">
-      <img src="assets/img/profile.jpg" alt="Davit Miroyan" onerror="this.src='assets/img/profile-placeholder.svg'">
+      <div class="hero-photo">
+        <img src="assets/img/profile.jpg" alt="Davit Miroyan" onerror="this.src='assets/img/profile-placeholder.svg'">
+        <div class="hero-links">
+          <a href="assets/DavitMiroyan-CV.pdf">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h6l4 4v12H6z"/><path d="M12 2v4h4"/></svg>
+            CV
+          </a>
+          <span class="dot">&middot;</span>
+          <a href="mailto:miroyan7davit@gmail.com">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="12" rx="1.5"/><path d="M2 5.5l8 6 8-6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
       <div class="hero-text">
         <p class="hero-name">Davit Miroyan <span class="native-name">Դավիթ Միրոյան</span></p>
         <p>
@@ -43,11 +56,7 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    &copy; <span id="year"></span> Davit Miroyan &middot; <a href="mailto:miroyan7davit@gmail.com">miroyan7davit@gmail.com</a>
-  </footer>
 </div>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
